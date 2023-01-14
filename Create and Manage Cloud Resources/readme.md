@@ -1,5 +1,8 @@
 # TASK -1 
-### FROM VIDEO
+### Navigation Menu -> Compute Engine -> VM Instances -> Create Instance ->
+### Name the instance ``` Instance name``` .
+### Use an f1-micro machine type. which is in n1 type.
+### Use the default image type (Debian Linux).
 
 
 # TASK 2 - 
@@ -46,29 +49,33 @@ gcloud compute instance-groups managed \
           --region us-east1
 ```          
           
-          
+```          
 gcloud compute backend-services create web-server-backend \
           --protocol HTTP \
           --http-health-checks http-basic-check \
           --global
+ ```
+```
 gcloud compute backend-services add-backend web-server-backend \
           --instance-group web-server-group \
           --instance-group-region us-east1 \
           --global
+```          
           
-          
-          
+```          
 gcloud compute url-maps create web-server-map \
           --default-service web-server-backend
+```
+```
 gcloud compute target-http-proxies create http-lb-proxy \
           --url-map web-server-map
-          
-          
+```          
+```          
 gcloud compute forwarding-rules create http-content-rule \
         --global \
         --target-http-proxy http-lb-proxy \
         --ports 80
         
 gcloud compute forwarding-rules list
-
+```
 ![This is an image](https://myoctocat.com/assets/images/base-octocat.svg)
