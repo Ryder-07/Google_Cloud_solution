@@ -3,7 +3,9 @@ TASK -1 FROM VIDEO
 
 TASK 2 - 
 
-```gcloud config set compute/zone us-east1-b```
+```
+gcloud config set compute/zone us-east1-b
+```
 
 gcloud container clusters create [ANY NAME]
 
