@@ -1,4 +1,5 @@
-# TASK -1 FROM VIDEO
+# TASK -1 
+### FROM VIDEO
 
 
 # TASK 2 - 
@@ -18,7 +19,7 @@ kubectl create deployment hello-server --image=gcr.io/google-samples/hello-app:2
 ```
 kubectl expose deployment hello-server --type=LoadBalancer --port 8083                    [Kindly check port number one's]
 ```
-# 3RD TASK ------
+# 3RD TASK -
 
 ```
 gcloud compute instance-templates create web-server-template \
@@ -34,8 +35,8 @@ gcloud compute instance-groups managed create web-server-group \
           --template web-server-template \
           --region us-east1
 ```        
-          
-gcloud compute firewall-rules create [REPLACE YOUR FIREWALL NAME WHICH IS MENTIONED ON LEFT SIDE] \
+```         
+gcloud compute firewall-rules create  [REPLACE YOUR FIREWALL NAME WHICH IS MENTIONED ON LEFT SIDE] \
           --allow tcp:80 \
           --network nucleus-vpc
 gcloud compute http-health-checks create http-basic-check
@@ -43,7 +44,7 @@ gcloud compute instance-groups managed \
           set-named-ports web-server-group \
           --named-ports http:80 \
           --region us-east1
-          
+```          
           
           
 gcloud compute backend-services create web-server-backend \
