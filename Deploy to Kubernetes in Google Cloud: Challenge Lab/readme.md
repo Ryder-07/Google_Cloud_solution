@@ -3,7 +3,7 @@
 source <(gsutil cat gs://cloud-training/gsp318/marking/setup_marking_v2.sh)
 gcloud source repos clone valkyrie-app --project=qwiklabs-gcp-01-096d3d9fe9fc [Your Project Id]
 cd valkyrie-app
-cat > Dockerfile <<EOF
+cat > Dockerfile <<EOF \n
 docker build -t valkyrie-dev:v0.0.3 . [AS PER YOUR NAME AND NUMBER]
 cd ..
 ./step1_v2.sh
