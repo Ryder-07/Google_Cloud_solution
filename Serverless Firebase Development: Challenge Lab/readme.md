@@ -1,4 +1,8 @@
-
+# SOLUTION
+```
+gcloud auth list
+gcloud config list project
+```
 ```
 export DATASET_SERVICE_NAME=
 export FRONTEND_STAGING_SERVICE=
