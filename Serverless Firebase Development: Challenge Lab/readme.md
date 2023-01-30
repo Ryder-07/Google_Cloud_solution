@@ -4,6 +4,12 @@ gcloud auth list
 gcloud config list project
 ```
 ```
+  gcloud config set project $(gcloud projects list --format='value(PROJECT_ID)' --filter='qwiklabs-gcp')
+  ```
+  ```
+    git clone https://github.com/rosera/pet-theory.git
+  ```
+```
 export DATASET_SERVICE_NAME=
 export FRONTEND_STAGING_SERVICE=
 export FRONTEND_PRODUCTION_SERVICE=
