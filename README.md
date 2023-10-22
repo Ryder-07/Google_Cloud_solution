@@ -22,8 +22,10 @@ Respond to my issues or create your own issue with a problem statement I will as
 Fork this repository
 
 
-git clone https://github.com/<your_github_user_name>/Leet_Code.git
-cd Leet_Code
+git clone https://github.com/<your_github_user_name>/Google_Cloud_solution.git
+
+
+cd Google_Cloud_solution
 
 
 git remote add upstream https://github.com/souvikg544/Leet_Code.git
